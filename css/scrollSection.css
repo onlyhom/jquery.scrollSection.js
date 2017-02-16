@@ -1,0 +1,69 @@
+.scrollSection .goArrow {
+  float: left;
+}
+.scrollSection .goArrow span {
+  display: inline-block;
+  width: 21px;
+  height: 35px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  opacity: 0.5;
+  margin-top: 170px;
+}
+.scrollSection .goArrow span:hover {
+  opacity: 1;
+}
+.scrollSection .goPrev {
+  text-align: left;
+}
+.scrollSection .goPrev span {
+  background-image: url(../images/arrow-left.png);
+}
+.scrollSection .goNext {
+  text-align: right;
+}
+.scrollSection .goNext span {
+  background-image: url(../images/arrow-right.png);
+}
+.scrollSection img {
+  max-width: 100%;
+  width: 100%;
+}
+.scrollSection .viewOuter {
+  width: 100%;
+  overflow: hidden;
+}
+.scrollSection .viewOuter .viewShow {
+  width: 83.333%;
+  overflow: hidden;
+  position: relative;
+  height: 380px;
+  float: left;
+  border-radius: 10px;
+}
+.scrollSection .viewOuter .viewContent {
+  width: 200%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 0;
+}
+.scrollSection .viewOuter .viewContent ul {
+  margin-bottom: 0;
+  display: block;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+.scrollSection .viewOuter .viewContent ul:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.scrollSection .viewOuter .viewContent ul li {
+  width: 50%;
+  float: left;
+  background: #972125;
+}

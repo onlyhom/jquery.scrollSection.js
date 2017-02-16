@@ -1,0 +1,93 @@
+.clearfix() {
+  &:after {
+    content: ".";
+    display: block;
+    height:0;
+    clear:both;
+    visibility: hidden;
+  }
+}
+.scrollSection{
+    .goArrow{
+        float:left;
+        span{
+            display: inline-block;
+            width: 21px;
+            height: 35px;
+            background-repeat:no-repeat;
+            cursor: pointer;
+            opacity: 0.5;
+            margin-top: 170px; 
+            &:hover{
+                opacity: 1; 
+            }
+        }
+    }
+    .goPrev{
+        text-align: left;
+        span{
+            background-image: url(../images/arrow-left.png);
+        }
+    }
+    .goNext{
+        // float: right;
+        text-align: right;
+        span{
+            background-image: url(../images/arrow-right.png);
+        }
+    }
+    img{
+        max-width: 100%;
+        width: 100%;
+    }
+    .viewOuter{
+        width:100%; 
+        overflow:hidden;
+        // background: skyblue;
+        .viewShow{
+            width:83.333%; 
+            overflow:hidden;
+            position:relative;
+            height:380px;
+            float:left;
+            // background: pink;
+            border-radius: 10px;
+        }
+        .viewContent{ 
+            width:200%;
+            position:absolute;
+            left:0px;
+            top:0px;
+            padding: 0;
+            // background:orange;
+            ul{
+                margin-bottom: 0;
+                display: block;
+                width: 100%;
+                height:380px;
+                overflow: hidden;
+                .clearfix();
+                li{
+                    width:50%;
+                    float:left;
+                    background:#972125;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
