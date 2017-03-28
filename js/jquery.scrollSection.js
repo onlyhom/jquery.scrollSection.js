@@ -47,9 +47,13 @@
             });
         }
 
-
         return this.each(function(){
+
             var me = $(this);
+            var btn = me.find('.arrowBtn span');
+            me.find('.viewShow').css('height',me.find('li').height());
+            me.find('.arrowBtn span').css('margin-top', me.find('li').height()*0.5-btn.height()*0.5);
+
             me.find('.goNext span').on(option.eventType,function(){
                 nextScroll(me.find('.viewContent'));
             });
