@@ -1,0 +1,52 @@
+.viewOuter{
+    width:100%;
+    overflow:hidden;
+    margin-bottom: 20px;
+    .arrowBtn{
+        span{
+            display: inline-block;
+            width: 21px;
+            height: 35px;
+            background-image: url(../images/arrow-left.png);
+            background-repeat:no-repeat;
+            cursor: pointer;
+            opacity: 0.5;
+            margin-top: 75px;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    .goNext{
+        text-align: right;
+        span{
+            background-image: url(../images/arrow-right.png);
+        }
+    }
+    .viewShow{
+        width:83%;
+        overflow:hidden;
+        position:relative;
+        height:300px;
+        float:left;
+
+        .viewContent{
+            width:200%;
+            position:absolute;
+            left:0px;
+            top:0px;
+            padding: 0;
+            ul{
+                li{
+                    width:12.5%;
+                    margin-bottom: 100px;
+                    float:left;
+                    cursor:pointer;
+                    .zoomImage{
+                        padding-bottom: 133%;
+                    }
+                }
+            }
+        }
+    }
+}
