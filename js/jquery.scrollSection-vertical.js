@@ -25,26 +25,15 @@
 
         function preScroll(vcon){
             var offset = (vcon.find('li').outerHeight(true)) * -1;
-            vcon.stop().animate({
+            for(var i=0;i<vcon.find('ul').length;i++){
+              var lastItem = vcon.find('ul').eq(i).find('li').last();
+              vcon.find("ul").eq(i).prepend(lastItem);
+            }
+            vcon.css("top", offset);
+            vcon.animate({
               top: "0px"
             }, "normal", function() {
-              for(var i=0;i<vcon.find('ul').length;i++){
-                var lastItem = vcon.find('ul').eq(i).find('li').last();
-                vcon.find("ul").eq(i).prepend(lastItem);
-              }
-              $(this).css("top", offset);
-                console.log('pre');
-            });
-
-            // for(var i=0;i<vcon.find('ul').length;i++){
-            //   var lastItem = vcon.find('ul').eq(i).find('li').last();
-            //   vcon.find("ul").eq(i).prepend(lastItem);
-            // }
-            // vcon.css("top", offset);
-            // vcon.animate({
-            //   top: "0px"
-            // }, "normal", function() {
-            // })
+            })
         }
 
         function autoPlay(me){
@@ -61,11 +50,15 @@
             });
         }
 
-
         return this.each(function(){
             var me = $(this);
-            me.find('.viewOuter').css('width', option.width);
+            me.css('width', option.width);
+            if(option.height == "auto"){
+                console.log('auto');
+            }
             me.find('.viewShow').css('height', option.height);
+
+            console.log(me.find('.zoomImage').outerHeight(true));
 
             me.find('.goNext span').on(option.eventType,function(){
                 nextScroll(me.find('.viewContent'));
